@@ -56,6 +56,32 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ];
 
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = "ListItem";
+
 export function MainNav() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -100,27 +126,56 @@ export function MainNav() {
                         href="/"
                       >
                         {/* <Icons.logo className="h-6 w-6" /> */}
-                        <div className="mb-2 mt-4 text-lg font-medium">
-                          shadcn/ui
+                        <div className="mb-2 mt-4 text-lg font-medium leading-6">
+                          PT. CAHAYA MERCUSUAR INDONESIA
                         </div>
                         <p className="text-sm leading-tight text-muted-foreground">
-                          Beautifully designed components built with Radix UI
-                          and Tailwind CSS.
+                          Terangi Setiap Momen dengan Solusi LED Display Terbaik
+                          untuk Semua Jenis Event Anda.
                         </p>
                       </a>
                     </NavigationMenuLink>
                   </li>
-                  <ListItem href="/docs" title="LED Display">
-                    Re-usable components built using Radix UI and Tailwind CSS.
+                  <ListItem href="/products/led-display" title="LED Display">
+                    Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk
+                    Semua Jenis Event Anda.
                   </ListItem>
-                  <ListItem href="/docs/installation" title="Installation">
-                    How to install dependencies and structure your app.
+                  <ListItem href="/products/parled" title="PAR LED">
+                    Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk
+                    Semua Jenis Event Anda.
+                  </ListItem>
+                  <ListItem href="/products/fresnel" title="Fresnel">
+                    Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk
+                    Semua Jenis Event Anda.
+                  </ListItem>
+                  <ListItem href="/products/moving-head" title="Moving Head">
+                    Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk
+                    Semua Jenis Event Anda.
+                  </ListItem>
+                  <ListItem href="/products/follow-spot" title="Follow Spot">
+                    Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk
+                    Semua Jenis Event Anda.
                   </ListItem>
                   <ListItem
-                    href="/docs/primitives/typography"
-                    title="Typography"
+                    href="/products/smoke-&-laser"
+                    title="Smoke & Laser"
                   >
-                    Styles for headings, paragraphs, lists...etc
+                    Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk
+                    Semua Jenis Event Anda.
+                  </ListItem>
+                  <ListItem
+                    href="/products/riging-system"
+                    title="Riging System"
+                  >
+                    Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk
+                    Semua Jenis Event Anda.
+                  </ListItem>
+                  <ListItem
+                    href="/products/controller-processor"
+                    title="Controller & Processor"
+                  >
+                    Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk
+                    Semua Jenis Event Anda.
                   </ListItem>
                 </ul>
               </NavigationMenuContent>
@@ -177,29 +232,3 @@ export function MainNav() {
     </nav>
   );
 }
-
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-ListItem.displayName = "ListItem";
