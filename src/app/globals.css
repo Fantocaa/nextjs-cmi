@@ -121,10 +121,28 @@
   box-shadow: inset 0 0 12px rgba(191, 33, 47, 0.44);
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
+.button-services {
+  background: linear-gradient(
+      180deg,
+      rgba(191, 33, 47, 0) 0%,
+      rgba(191, 33, 47, 0.32) 100%
+    ),
+    rgba(191, 33, 47, 0.12);
+  box-shadow: inset 0 0 12px rgba(191, 33, 47, 0.24);
+}
+.button-services:hover {
+  background: linear-gradient(
+      180deg,
+      rgb(86, 31, 36) 0%,
+      rgba(191, 33, 47, 0.42) 100%
+    ),
+    rgba(191, 33, 47, 0.24);
+  box-shadow: inset 0 0 12px rgba(191, 33, 47, 0.44);
+}
+
 .scrollbar-hidden {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
@@ -166,4 +184,32 @@ html {
 .swiper-slide img {
   display: block;
   width: 100%;
+}
+
+@keyframes glowing {
+  0%,
+  100% {
+    box-shadow: 0 0 8px #f9a73e, 0 0 25px #f9a73e, 0 0 50px #f9a73e,
+      0 0 200px #f9a73e, 0 0 2px #bf212f, 0 0 25px #bf212f, 0 0 50px #bf212f,
+      0 0 200px #bf212f;
+  }
+  25%,
+  75% {
+    box-shadow: 0 0 32px rgba(249, 167, 62, 0.75),
+      0 0 30px rgba(249, 167, 62, 0.75), 0 0 60px rgba(249, 167, 62, 0.75),
+      0 0 300px rgba(249, 167, 62, 0.75), 0 0 10px rgba(191, 33, 47, 0.75),
+      0 0 30px rgba(191, 33, 47, 0.75), 0 0 60px rgba(191, 33, 47, 0.75),
+      0 0 300px rgba(191, 33, 47, 0.75);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(249, 167, 62, 0.5),
+      0 0 30px rgba(249, 167, 62, 0.5), 0 0 60px rgba(249, 167, 62, 0.5),
+      0 0 300px rgba(249, 167, 62, 0.5), 0 0 10px rgba(191, 33, 47, 0.5),
+      0 0 30px rgba(191, 33, 47, 0.5), 0 0 60px rgba(191, 33, 47, 0.5),
+      0 0 300px rgba(191, 33, 47, 0.5);
+  }
+}
+
+.glowing-border {
+  animation: glowing 4s infinite;
 }

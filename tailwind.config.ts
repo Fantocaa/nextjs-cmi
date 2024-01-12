@@ -18,6 +18,7 @@ const config = {
       },
     },
     extend: {
+      
       colors: {
         darkcmi: "#1E1E1E",
         orangecmi: "#F9A73E",
@@ -75,6 +76,7 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      
     },
   },
   plugins: [require("tailwindcss-animate")],

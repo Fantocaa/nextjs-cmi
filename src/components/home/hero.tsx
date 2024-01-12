@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
-import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -14,7 +13,7 @@ const Hero = () => {
             className="Welcome-box py-[8px] px-[7px] border border-[#BF212F] opacity-[0.9] flex justify-center items-center text-center"
           >
             <SparklesIcon className="text-[#F9A73E] mr-[10px] h-5 w-5" />
-            <h1 className="Welcome-text text-[13px]">
+            <h1 className="Welcome-text text-xs pr-2">
               PT. Cahaya Mercusuar Indonesia
             </h1>
           </div>
@@ -29,7 +28,7 @@ const Hero = () => {
                 {" "}
                 the best{" "}
               </span>
-              project exprience
+              Project Experience
             </span>
           </div>
 
