@@ -152,20 +152,24 @@ html {
   scroll-behavior: smooth;
 }
 
-.style-home {
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  overflow-y: auto;
-  scrollbar-width: none;
-  color: white;
-  background: url("../../public/images/bg/bbblurry.svg");
-  background-size: cover;
-  background-position: center;
+/* Mengubah lebar scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.style-home::-webkit-scrollbar {
-  display: none;
+/* Mengubah background track scrollbar */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Mengubah warna dan hover scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .swiper {
@@ -193,6 +197,7 @@ html {
       0 0 200px #f9a73e, 0 0 2px #bf212f, 0 0 25px #bf212f, 0 0 50px #bf212f,
       0 0 200px #bf212f;
   }
+
   25%,
   75% {
     box-shadow: 0 0 32px rgba(249, 167, 62, 0.75),
@@ -201,6 +206,7 @@ html {
       0 0 30px rgba(191, 33, 47, 0.75), 0 0 60px rgba(191, 33, 47, 0.75),
       0 0 300px rgba(191, 33, 47, 0.75);
   }
+
   50% {
     box-shadow: 0 0 20px rgba(249, 167, 62, 0.5),
       0 0 30px rgba(249, 167, 62, 0.5), 0 0 60px rgba(249, 167, 62, 0.5),
@@ -211,5 +217,18 @@ html {
 }
 
 .glowing-border {
-  animation: glowing 4s infinite;
+  animation: glowing 4s ease-in-out infinite;
+}
+
+/* Navbar dengan latar belakang transparan */
+.bg-transparent {
+  background-color: transparent;
+  transition: background-color 0.3s ease-in;
+}
+
+/* Navbar dengan latar belakang berwarna */
+.scrolled-bg {
+  background-color: #ffffff; /* Ganti dengan warna yang Anda inginkan */
+  transition: background-color 0.3s ease-in;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Atur shadow sesuai keinginan */
 }

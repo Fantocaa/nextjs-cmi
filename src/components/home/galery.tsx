@@ -2,7 +2,7 @@ import React from "react";
 
 const Galery = () => {
   return (
-    <div className="snap-start h-screen w-full flex justify-center items-center">
+    <div className="h-screen w-full flex justify-center items-center">
       Galery
     </div>
   );

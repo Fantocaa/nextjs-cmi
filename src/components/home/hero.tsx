@@ -6,7 +6,7 @@ import { SparklesIcon } from "@heroicons/react/24/solid";
 const Hero = () => {
   return (
     <section className="w-full flex">
-      <div className="snap-start h-screen w-full flex justify-center items-center">
+      <div className="h-screen w-full flex justify-center items-center">
         <div className="h-full w-full flex flex-col gap-5 justify-center m-auto items-center text-center">
           <div
             //   variants={slideInFromTop}

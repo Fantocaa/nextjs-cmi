@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const Services = () => {
   return (
-    <div className="snap-start h-screen w-full flex justify-center items-center py-52">
+    <div className="h-full w-full flex justify-center items-center py-52">
       <div className="w-full h-full rounded-2xl flex justify-center items-center glowing-border">
         {/* <div className="bg-gradient-to-r from-orangecmi to-red-500 w-full h-full rounded-2xl flex justify-center items-center"> */}
         <div className="p-12 text-white font-bold text-6xl flex">

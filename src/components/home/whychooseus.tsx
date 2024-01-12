@@ -8,7 +8,7 @@ import {
 
 const Whychooseus = () => {
   return (
-    <div className="snap-start h-screen w-full flex justify-center items-center">
+    <div className="h-full w-full flex justify-center items-center">
       <Accordion type="single" collapsible className="w-1/2">
         <AccordionItem value="item-1">
           <AccordionTrigger className="text-3xl">Versatility</AccordionTrigger>
